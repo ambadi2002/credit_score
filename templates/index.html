@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>CREDIT SCORE PREDICTION</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <div class="container">
+        <h1>CREDIT SCORE PREDICTION</h1>
+        <img src="{{url_for('static', filename='images/creditscore.png' )}}" alt="Index Image" style="width: 40%; height: 40%;">
+        <form action="/predict" method="post">
+            <div class="form-group">
+                <label for="Age">Age:</label>
+                <input type="number" id="Age" name="Age" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Monthly_Inhand_Salary">Monthly In-hand Salary:</label>
+                <input type="number" id="Monthly_Inhand_Salary" name="Monthly_Inhand_Salary" step="any" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Interest_Rate">Interest Rate:</label>
+                <input type="number" id="Interest_Rate" name="Interest_Rate" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Delay_from_due_date">Delay From Due Date:</label>
+                <input type="number" id="Delay_from_due_date" name="Delay_from_due_date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Num_of_Delayed_Payment">Num Of Delayed Payment:</label>
+                <input type="number" id="Num_of_Delayed_Payment" name="Num_of_Delayed_Payment" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Credit_Utilization_Ratio">Credit Utilization Ratio:</label>
+                <input type="number" id="Credit_Utilization_Ratio" name="Credit_Utilization_Ratio" step="any" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Credit_History_Age">Credit History Age:</label>
+                <input type="number" id="Credit_History_Age" name="Credit_History_Age" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Payment_Behaviour">Payment Behaviour:</label>
+                <input type="number" id="Payment_Behaviour" name="Payment_Behaviour" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Monthly_Balance">Monthly Balance:</label>
+                <input type="number" id="Monthly_Balance" name="Monthly_Balance" step="any" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Credit_Age_Years">Credit Age Years:</label>
+                <input type="number" id="Credit_Age_Years" name="Credit_Age_Years" step="any" required>
+            </div>
+
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</body>
+</html>
